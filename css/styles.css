@@ -119,6 +119,10 @@ address {
   text-decoration: none;
 }
 @media screen and (min-width: 768px) {
+    .section {
+        padding: 96px 0;
+        width: 100%;
+      }
   .container {
     min-width: 768px;
   }
@@ -173,10 +177,7 @@ address {
     display: none;
   }
 
-  .section {
-    padding: 96px 0;
-    width: 100%;
-  }
+
   .backdrop {
     display: flex;
     position: fixed;

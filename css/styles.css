@@ -19,12 +19,11 @@ header {
 }
 .page-header {
   display: flex;
-    align-items: center;
-    border-bottom: 1px solid #E7E9FC;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-    justify-content: space-between;
-
+  align-items: center;
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  justify-content: space-between;
 }
 .section {
   padding: 96px 0;
@@ -118,20 +117,101 @@ address {
   text-transform: uppercase;
   text-decoration: none;
 }
+.title-page {
+  background-color: #2e2f42;
+  padding: 72px 0;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-bg_mob@1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+}
+.title-container {
+}
+.title-text {
+  color: #fff;
+  font-size: 36px;
+  max-width: 200px;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin: 0 auto;
+}
+.button {
+  color: #fff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  display: block;
+  padding: 16px 32px;
+  margin: 72px auto 0;
+  border-radius: 4px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.hero-icon-con {
+  display: none;
+}
+
+.hero-title {
+  margin: 8px 0;
+  color: #2e2f42;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.hero-text {
+  color: #434455;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.team-section {
+  background-color: #f4f4fd;
+}
 @media screen and (min-width: 768px) {
-    .section {
-        padding: 96px 0;
-        width: 100%;
-      }
+  .section {
+    padding: 96px 0;
+    width: 100%;
+  }
   .container {
     min-width: 768px;
   }
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      justify-content: center;
-    }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    justify-content: center;
+  }
   .header-nav {
     display: flex;
     gap: 120px;
@@ -176,8 +256,9 @@ address {
   .btn-menu {
     display: none;
   }
-
-
+  .button {
+    margin: 32px auto 0;
+  }
   .backdrop {
     display: flex;
     position: fixed;
@@ -193,15 +274,35 @@ address {
     visibility: hidden;
     pointer-events: none;
   }
-  @media screen and (min-width: 768px) {
-    .title-page {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/hero/hero-bg_desk@1x.jpg);
-    }
+  .title-page {
+    padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/hero-bg_desk@2x.jpg);
   }
+  .title-text {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+  }
+  .hero-icon-con {
+    display: none;
+  }
+  .hero-title {
+    text-align: start;
+  }
+  .hero-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+  .hero-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+
   @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .title-page {
       background-image: linear-gradient(
@@ -284,84 +385,27 @@ address {
   }
 
   .title-page {
-    background-color: #2e2f42;
     padding: 188px 0;
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/hero-bg_desk@1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    margin: 0 auto;
   }
 
   .title-container {
     display: block;
-    padding: 68px 0;
-  }
-  .title-text {
-    color: #fff;
-    font-size: 56px;
-    line-height: 1.07;
-    text-align: center;
-    letter-spacing: 0.02em;
-    margin: 0 auto;
-    max-width: 496px;
-  }
-  .button {
-    color: #fff;
-    background-color: #4d5ae5;
-    cursor: pointer;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    display: block;
-    padding: 16px 32px;
-    margin: 0 auto;
-    border-radius: 4px;
-    min-width: 169px;
-    height: 56px;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .button:hover,
   .button:focus {
     background-color: #404bbf;
   }
-  .visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  }
   .hero-page h3 {
-    color: #2e2f42;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
   }
-  .hero-page p {
-    color: #434455;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-  }
+
   .hero-list {
-    display: flex;
     gap: 24px;
-    justify-content: center;
-  }
-  .hero-title {
-    margin: 8px 0;
   }
   .hero-list-item {
     width: calc((100% - 72px) / 4);
@@ -376,15 +420,14 @@ address {
     border-radius: 4px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
   }
   .hero-icon {
   }
-  .hero-list p {
-    padding-top: 8px;
+  .hero-title {
+    font-size: 20px;
   }
-  .team-section {
-    background-color: #f4f4fd;
+  .hero-text {
+    font-weight: 400;
   }
   .team-container ul {
     display: flex;
@@ -597,6 +640,10 @@ address {
     margin-right: 80px;
   }
   .footer-subscribe {
+    display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
   }
   .footer-form {
     display: flex;

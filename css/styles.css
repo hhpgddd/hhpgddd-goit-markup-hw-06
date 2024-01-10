@@ -718,7 +718,7 @@ footer {
   margin-bottom: 40px;
 }
 .mobile-menu-link.current {
-  color: #404BBF;
+  color: #404bbf;
 }
 .mobile-menu-link {
   color: #2e2f42;
@@ -731,13 +731,13 @@ footer {
 }
 .address-mob-list {
   font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    margin-top: 168px;
-    font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin-top: 168px;
+  font-style: normal;
 }
-.address-mob-item:not(:last-child){
+.address-mob-item:not(:last-child) {
   margin-bottom: 24px;
 }
 .mob-contact {
@@ -745,7 +745,7 @@ footer {
   text-decoration: none;
 }
 .mob-contact.accent {
-  color: #4D5AE5;
+  color: #4d5ae5;
 }
 .mobile-menu-socials {
   display: flex;

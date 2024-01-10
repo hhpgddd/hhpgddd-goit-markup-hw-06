@@ -117,18 +117,24 @@ address {
   text-transform: uppercase;
   text-decoration: none;
 }
+
 .title-page {
   background-color: #2e2f42;
   padding: 72px 0;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/hero/hero-bg_mob@1.jpg);
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)),
+          url(images\hero\hero-bg_mob@1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+}
+@media (min-resolution: 192dpi) {
+  .title-page {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(images\hero\hero-bg_mob@2x.jpg);
+  }
 }
 .title-container {
 }
@@ -409,12 +415,7 @@ footer {
   max-width: 264px;
   text-align: start;
 }
-.footer-subscribe {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 .subsc-txt {
   font-weight: 500;
   font-size: 16px;
@@ -428,21 +429,21 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
 }
-    .footer-input {
-      width: 288px;
-      height: 40px;
-      border-radius: 4px;
-      border: 1px solid #fff;
-      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-      background-color: transparent;
-      padding: 8px 16px;
-      
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 2;
-      letter-spacing: 0.04em;
-    }
+.footer-input {
+  width: 288px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  padding: 8px 16px;
+
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
 .footer-sbc-icon {
   fill: #f4f4fd;
 }
@@ -462,7 +463,6 @@ footer {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5em;
-  /* 150% */
   letter-spacing: 0.04em;
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -471,6 +471,26 @@ footer {
 }
 .footer-label {
   padding-bottom: 16px;
+}
+.backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -534,28 +554,21 @@ footer {
   .button {
     margin: 32px auto 0;
   }
-  .backdrop {
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(46, 47, 66, 0.4);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-  }
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .title-page {
+      padding: 112px 0;
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)),
+        url(images\hero\hero-bg_desk@2.jpg);
+    }
+}
   .title-page {
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/hero-bg_desk@2x.jpg);
+      url(images\hero\hero-bg_desk@1.jpg);
   }
   .title-text {
     font-size: 56px;
@@ -580,15 +593,36 @@ footer {
     width: calc((100% - 24px) / 2);
   }
   .portfolio-list {
-    row-gap: 48px;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .page-footer {
+    padding-left: 108px;
+  }
+  .footer-container {
+    flex-direction: row;
+    text-align: left;
+    column-gap: 24px;
+    align-items: baseline;
+  }
+  .footer-form {
+    display: flex;
+    flex-direction: row;
     gap: 24px;
   }
   .footer-input {
     width: 264px;
   }
-    .footer-label {
-      padding-bottom: 0;
-    }
+  .footer-label {
+    padding-bottom: 0;
+  }
+  .footer-btn {
+    margin-top: 0;
+  }
 
   @media screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .title-page {
@@ -770,9 +804,9 @@ footer {
     gap: 24px;
     flex-direction: row;
   }
-    .footer-label {
-      padding-bottom: 0px;
-    }
+  .footer-label {
+    padding-bottom: 0px;
+  }
   .footer-btn {
     margin-top: auto;
   }
